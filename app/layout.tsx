@@ -5,12 +5,16 @@ import { ThemeProvider } from "../components/theme-provider";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import Particles from "@/components/particles";
+import QueryProvider from "@/components/QueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shaunfurtado.is-a.dev/"),
-  title: "Sufiyan Chaudhari",
+  metadataBase: new URL("https://sufiyan-dev.vercel.app/"),
+  title: {
+    default: "Sufiyan Chaudhari",
+    template: "Sufiyan Chaudhari | %s",
+  },
   description: "Portfolio of Sufiyan Chaudhari",
   robots: {
     index: true,
@@ -33,6 +37,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning cz-shortcut-listen="true">
       <body
+        suppressHydrationWarning
+        cz-shortcut-listen="true"
         className={`${inter.className} antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
@@ -42,7 +48,7 @@ export default function RootLayout({
               quantity={300}
             />
             <Navbar />
-            {children}
+            <QueryProvider>{children}</QueryProvider>
             <Footer />
           </main>
         </ThemeProvider>

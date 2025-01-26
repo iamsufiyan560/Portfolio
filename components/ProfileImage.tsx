@@ -26,7 +26,7 @@ export const ProfileImage = ({
       >
         <Image
           src="https://avatars.githubusercontent.com/u/140635114?v=4"
-          alt="A picture of Shaun"
+          alt="A picture of Sufiyan Chaudhari"
           priority
           className="rounded-full"
           width={size === "sm" ? 40 : 96}

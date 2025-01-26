@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Thanks for reaching out",
+  description: "Thanks for reaching out",
+};
 
 export default function Thanks() {
   return (

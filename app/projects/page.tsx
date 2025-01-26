@@ -3,6 +3,12 @@ import Link from "next/link";
 import SocialLinks from "@/components/socialLinks";
 import { socialMediaLinks } from "@/data/socialMediaLinks";
 import { ThingsIveBuilt } from "@/components/projectcard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Project",
+  description: "My projects and things I've built.",
+};
 
 export default function Page() {
   return (

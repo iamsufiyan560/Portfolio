@@ -1,7 +1,12 @@
-"use client";
 import { TechIUse } from "@/components/techCard";
 import { contacts } from "@/data/contacts";
+import { Metadata } from "next";
 import { LuSendHorizontal } from "react-icons/lu";
+
+export const metadata: Metadata = {
+  title: "Contact Me",
+  description: "Get in touch with me through this contact form.",
+};
 
 export default function Page() {
   return (
