@@ -1,101 +1,83 @@
-import Image from "next/image";
-
+import Link from "next/link";
+import { ProfileImage } from "../components/ProfileImage";
+import { TechIUse } from "@/components/techCard";
+import { languages } from "@/data/languages";
+import { tools } from "@/data/tools";
+import { libraries } from "@/data/libraries";
+import SocialLinks from "@/components/socialLinks";
+import { socialMediaLinks } from "@/data/socialMediaLinks";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <section className="flex flex-col max-w-screen-xl mx-auto">
+      <div className="flex flex-row items-center">
+        <ProfileImage />
+        <div className="ml-4">
+          <h1 className="font-medium text-3xl mb-4 tracking-tighter">
+            Hey I&apos;m
+          </h1>
+          <h1 className="font-medium text-4xl mb-4 tracking-tighter">
+            SUFIYAN CHAUDHARI
+          </h1>
+          <div className="flex justify-end">
+            <div className="h-12 mr-4 md:h-10 flex flex-col items-center justify-center space-y-2 font-semibold border-[1px] border-none bg-white/5 p-4 text-sm md:text-base rounded-md shadow-md hover:shadow-rose-500/40 active:translate-y-[2px] transition-all duration-300 ease-out">
+              <a
+                href="/Resume/resume.pdf"
+                download="Sufiyan_Resume.pdf"
+                target="_blank"
+                className="whitespace-nowrap"
+              >
+                Resume
+              </a>
+            </div>
+            <Link href="/contact">
+              <div className="h-12 md:h-10 flex flex-col items-center justify-center space-y-2 font-semibold border-[1px] border-none bg-white/5 p-4 text-sm md:text-base rounded-md shadow-md hover:shadow-rose-500/40 active:translate-y-[2px] transition-all duration-300 ease-out">
+                <span className="whitespace-nowrap">Contact Me</span>
+              </div>
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+      <p className="p-4 prose prose-neutral dark:prose-invert">
+        I&apos;m a software developer with a strong focus on Web Applications
+        and Backend APIs. My work revolves around building scalable digital
+        solutions, optimizing performance, and enhancing user experiences.
+      </p>
+      <p className="p-4">
+        I&apos;m always open to collaborating on exciting projects and
+        connecting with like-minded professionals. If you&apos;d like to discuss
+        web development, tech trends, or innovative ideas,{" "}
+        <b>
+          <Link href="/contact">let&apos;s connect!</Link>
+        </b>
+      </p>
+
+      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+
+      <h2 className="font-medium text-2xl mb-2 tracking-tighter pt-6">
+        Tech Stack that i use:
+      </h2>
+      <h3 className="pt-4 ">Languages :</h3>
+      <TechIUse tech={languages} />
+      <h3 className="pt-4">Frameworks / Libraries :</h3>
+      <TechIUse tech={libraries} />
+      <h3 className="pt-4">Tools :</h3>
+      <TechIUse tech={tools} />
+
+      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+
+      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+      <div className="flex flex-row justify-between items-center mt-0">
+        <SocialLinks links={socialMediaLinks} />
+
+        <div className="flex justify-end">
+          <Link href="/contact">
+            <div className="h-12 md:h-10 flex flex-col items-center justify-center space-y-2 font-semibold border-[1px] border-none bg-white/5 p-4 text-sm md:text-base rounded-md shadow-md hover:shadow-rose-500/40 active:translate-y-[2px] transition-all duration-300 ease-out">
+              <span className="whitespace-nowrap">Contact Me</span>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
