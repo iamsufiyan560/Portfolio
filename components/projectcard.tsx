@@ -1,7 +1,6 @@
 import Image from "next/image";
 import NextLink from "next/link";
 import { VscGithub } from "react-icons/vsc";
-import { FiExternalLink } from "react-icons/fi";
 import { projects } from "@/data/projects";
 
 export const ThingsIveBuilt = () => {
