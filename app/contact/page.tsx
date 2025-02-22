@@ -21,7 +21,7 @@ export default function Page() {
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:3000/thanks"
+            value="https://sufiyan-dev.vercel.app/thanks"
           />
 
           <input
