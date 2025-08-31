@@ -103,7 +103,8 @@ export default function ExperienceContent() {
             </h2>
             <p className="font-normal text-sm">
               {exp.role}, {formatDate(exp.startDate)} —{" "}
-              {formatDate(exp.endDate)} ({exp.location})
+              {exp.endDate ? formatDate(exp.endDate) : "Present"} (
+              {exp.location})
             </p>
             <p className="font-normal text-sm">
               <b className="font-normal text-sm">Technologies used:</b>{" "}
