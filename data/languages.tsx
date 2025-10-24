@@ -5,8 +5,14 @@ import {
   TbBrandPython,
   TbBrandCSharp,
 } from "react-icons/tb";
+import { GrJava } from "react-icons/gr";
 
 export const languages = [
+  {
+    title: "Java",
+    Icon: GrJava,
+    href: "https://www.java.com/en/",
+  },
   {
     title: "JavaScript",
     Icon: IoLogoJavascript,

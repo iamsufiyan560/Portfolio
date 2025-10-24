@@ -1,19 +1,17 @@
+import { FaAngular } from "react-icons/fa6";
 import { IoLogoNodejs } from "react-icons/io5";
 import {
   SiExpress,
-  SiSqlite,
   SiDrizzle,
-  SiMysql,
   SiBun,
-  SiPostgresql,
   SiPrisma,
   SiDotnet,
+  SiSpring,
 } from "react-icons/si";
 import {
   TbBrandNextjs,
   TbBrandReact,
   TbBrandTailwind,
-  TbBrandMongodb,
   TbBrandVue,
 } from "react-icons/tb";
 
@@ -48,21 +46,7 @@ export const libraries = [
     Icon: TbBrandTailwind,
     href: "https://tailwindcss.com/",
   },
-  {
-    title: "MySQL",
-    Icon: SiMysql,
-    href: "https://www.mysql.com/",
-  },
-  {
-    title: "SQLite3",
-    Icon: SiSqlite,
-    href: "https://www.sqlite.org/index.html",
-  },
-  {
-    title: "MongoDB",
-    Icon: TbBrandMongodb,
-    href: "https://www.mongodb.com/",
-  },
+
   {
     title: "Vue.js",
     Icon: TbBrandVue,
@@ -83,11 +67,7 @@ export const libraries = [
     Icon: TbBrandReact,
     href: "https://expo.dev/",
   },
-  {
-    title: "PostgreSQL",
-    Icon: SiPostgresql,
-    href: "https://www.postgresql.org/",
-  },
+
   {
     title: "Prisma",
     Icon: SiPrisma,
@@ -102,5 +82,15 @@ export const libraries = [
     title: ".NET Entity ",
     Icon: SiDotnet,
     href: "https://docs.microsoft.com/en-us/ef/core/",
+  },
+  {
+    title: "Spring Boot ",
+    Icon: SiSpring,
+    href: "https://spring.io/",
+  },
+  {
+    title: "Angular",
+    Icon: FaAngular,
+    href: "https://angular.dev/",
   },
 ];

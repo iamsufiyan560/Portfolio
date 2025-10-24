@@ -14,7 +14,7 @@ export const ProfileImage = ({
       } ${
         isInteractive
           ? "group transform transition ease-out hover:scale-105 hover:from-midnight hover:to-rose-400 hover:shadow-rose-500/25 active:translate-y-[2px]"
-          : "ring-[5px] ring-rose-700/10"
+          : "ring-[5px] ring-rose-700/20"
       }`}
     >
       <div
@@ -25,7 +25,7 @@ export const ProfileImage = ({
         }`}
       >
         <Image
-          src="https://avatars.githubusercontent.com/u/140635114?v=4"
+          src="https://i.postimg.cc/gjcmLjXk/image.png"
           alt="A picture of Sufiyan Chaudhari"
           priority
           className="rounded-full"

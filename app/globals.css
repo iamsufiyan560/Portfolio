@@ -1,6 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.contribution-scrollbar {
+  scrollbar-width: thin !important;
+  scrollbar-color: #916f6f transparent !important;
+}
+
+/* Chrome, Safari, Edge */
+.contribution-scrollbar::-webkit-scrollbar {
+  height: 4px !important; /* horizontal scrollbar */
+}
+
+.contribution-scrollbar::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.contribution-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #916f6f !important;
+  border-radius: 4px !important;
+}
+
+.contribution-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #754444 !important;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }

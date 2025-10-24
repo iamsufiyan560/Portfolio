@@ -107,21 +107,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning cz-shortcut-listen="true">
+    <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
         suppressHydrationWarning
-        cz-shortcut-listen="true"
-        className={`${inter.className} antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto`}
+        className={`${inter.className} antialiased w-screen overflow-x-hidden flex flex-col md:flex-row md:px-4  mt-4 sm:mt-8`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-4 md:px-0 w-full max-w-2xl mx-auto">
             <Particles
-              className="absolute inset-0 -z-10 animate-fade-in"
-              quantity={300}
+              className="absolute inset-0 w-full h-full -z-10 animate-fade-in"
+              quantity={200}
             />
             <Navbar />
             <QueryProvider>{children}</QueryProvider>
