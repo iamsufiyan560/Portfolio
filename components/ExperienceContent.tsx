@@ -96,31 +96,33 @@ export default function ExperienceContent() {
 
     return (
       <div className="prose prose-neutral dark:prose-invert">
-        {data?.map((exp, index) => (
-          <div key={exp.id}>
-            <h2 className="font-medium text-xl mb-1 tracking-tighter">
-              {exp.company}
-            </h2>
-            <p className="font-normal text-sm">
-              {exp.role}, {formatDate(exp.startDate)} —{" "}
-              {exp.endDate ? formatDate(exp.endDate) : "Present"} (
-              {exp.location})
-            </p>
-            <p className="font-normal text-sm">
-              <b className="font-normal text-sm">Technologies used:</b>{" "}
-              {exp.techStack.join(", ")}
-            </p>
-            <p className="p-2">{exp.summary}</p>
-            <ul className="list-disc pl-6 p-4">
-              {exp.highlights.map((task, i) => (
-                <li key={i}>{task}</li>
-              ))}
-            </ul>
-            {index !== data.length - 1 && (
-              <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-            )}
-          </div>
-        ))}
+        {data
+          ?.filter((exp) => exp.isActive)
+          .map((exp, index) => (
+            <div key={exp.id}>
+              <h2 className="font-medium text-xl mb-1 tracking-tighter">
+                {exp.company}
+              </h2>
+              <p className="font-normal text-sm">
+                {exp.role}, {formatDate(exp.startDate)} —{" "}
+                {exp.endDate ? formatDate(exp.endDate) : "Present"} (
+                {exp.location})
+              </p>
+              <p className="font-normal text-sm">
+                <b className="font-normal text-sm">Technologies used:</b>{" "}
+                {exp.techStack.join(", ")}
+              </p>
+              <p className="p-2">{exp.summary}</p>
+              <ul className="list-disc pl-6 p-4">
+                {exp.highlights.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
+              </ul>
+              {index !== data.length - 1 && (
+                <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+              )}
+            </div>
+          ))}
       </div>
     );
   };
