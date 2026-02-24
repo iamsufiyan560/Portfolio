@@ -25,7 +25,7 @@ export const ProfileImage = ({
         }`}
       >
         <Image
-          src="https://i.postimg.cc/gjcmLjXk/image.png"
+          src="https://i.postimg.cc/1tNg0WJB/image-(2).png"
           alt="A picture of Sufiyan Chaudhari"
           priority
           className="rounded-full"
